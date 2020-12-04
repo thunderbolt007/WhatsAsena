@@ -76,7 +76,7 @@ Asena.addCommand({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*)
     }
 }));
 
-Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'tts (.*)', fromMe: false, desc: Lang.TTS_DESC}, (async (message, match) => {
     if(match[1] === undefined || match[1] == "")
         return;
     
@@ -101,7 +101,7 @@ Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (asyn
     await message.sendMessage(buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 }));
 
-Asena.addCommand({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
+Asena.addCommand({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_TEXT_SONG);    
     let arama = await yts(match[1]);
     arama = arama.all;
@@ -133,7 +133,7 @@ Asena.addCommand({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (a
         });
 }));
 
-Asena.addCommand({pattern: 'video ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
+Asena.addCommand({pattern: 'video ?(.*)', fromMe: false, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_VIDEO);    
     
     try {
@@ -155,7 +155,7 @@ Asena.addCommand({pattern: 'video ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, 
     });
 }));
 
-Asena.addCommand({pattern: 'yt ?(.*)', fromMe: true, desc: Lang.YT_DESC}, (async (message, match) => { 
+Asena.addCommand({pattern: 'yt ?(.*)', fromMe: false, desc: Lang.YT_DESC}, (async (message, match) => { 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORDS);    
     var reply = await message.reply(Lang.GETTING_VIDEOS);
 
@@ -174,7 +174,7 @@ Asena.addCommand({pattern: 'yt ?(.*)', fromMe: true, desc: Lang.YT_DESC}, (async
     await reply.delete();
 }));
 
-Asena.addCommand({pattern: 'wiki ?(.*)', fromMe: true, desc: Lang.WIKI_DESC}, (async (message, match) => { 
+Asena.addCommand({pattern: 'wiki ?(.*)', fromMe: false, desc: Lang.WIKI_DESC}, (async (message, match) => { 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORDS);    
     var reply = await message.reply(Lang.SEARCHING);
 
@@ -186,7 +186,7 @@ Asena.addCommand({pattern: 'wiki ?(.*)', fromMe: true, desc: Lang.WIKI_DESC}, (a
     await reply.delete();
 }));
 
-Asena.addCommand({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
+Asena.addCommand({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
     if (match[1] === '') return await message.sendMessage(Lang.NEED_WORDS);    
 
     gis(match[1], async (error, result) => {
