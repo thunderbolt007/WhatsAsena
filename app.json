@@ -11,7 +11,7 @@
         "ASENA_SESSION": {
             "description": "Qr.Js ile oluşturduğunuz özel session kodu.",
             "required": true,
-            "value":"ASENA;;;eyJjbGllbnRJRCI6IlljR2h5L095bzJ5aUw1TUcxU3FHQkE9PSIsInNlcnZlclRva2VuIjoiMUBHUlRqTlRGMVprNTJOUnJxVUJGbzd0TVB5bG9WK1N4TVNab21tcGhHSDhRaytmcDd1ZkVWb3NZL1F3NTZ2QllRdmJnb2tja1VVeERsSVE9PSIsImNsaWVudFRva2VuIjoidG5IOFM1SC9Sa2JRcGUxOVJmdVhMQ3dpQWI1TkFGbjZXYm5MWWlxZ1BlQT0iLCJlbmNLZXkiOiJ5QlJmc3dOZ25KUnJrbjlQSG81MkpyRWZBNzh5eFdFcWx2UWpPRWpoTHlVPSIsIm1hY0tleSI6IjdPTWN1TWhDVGd5T25rVUxDY1A4bWIxT2c1dlBVaU1BazlOcW9RTTdRMGM9In0="
+            "value":"session token"
         },
         "SUDO": {
             "description": "Sudo mode; Your number must be an international number. So you should have your number after the country code. Example: 1205xxxxxxxxx (USA number +1)",
@@ -40,7 +40,7 @@
         "HEROKU_API_KEY": {
             "description": "Herokuda API Keyiniz. Heroku API Key.",
             "required": true,
-            "value":"1a1a3f01-3f89-4b98-a9b0-8b4b1b861d10"
+            "value":"api key"
         },
         "HEROKU_APP_NAME": {
             "description": "Herokuda uygulama adı. Heroku APP Name.",
