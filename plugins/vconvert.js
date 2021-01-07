@@ -8,7 +8,7 @@ const cwebp = require('cwebp-bin');
 Asena.addCommand({pattern: 'audio', fromMe: false, desc: "Video to audio converter"}, (async (message, match) => {
     if (message.reply_message === false) return await message.sendMessage('*Respond to a Video File!*');
     if (!message.reply_message.video) return await message.sendMessage('*Respond to a Video File.*');
-    var downloading = await message.client.sendMessage(message.jid,'```Video to audio converter..```',MessageType.text);
+    var downloading = await message.client.sendMessage(message.jid,'```Coverting to audio..```',MessageType.text);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
             remoteJid: message.reply_message.jid,
